@@ -1,0 +1,13 @@
+***************** WEB APP *****************
+
+www
+|
+|-- ../api/
+|    `- get_trainlines.php
+|  
+|-- ../scripts/
+|    `- traindensity_pageload.js
+|
+|-- traindensity.html
+|-- handlebars-v4.0.5.js
+`-- jquery-1.12.2.min.js
