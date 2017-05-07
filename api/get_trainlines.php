@@ -3,8 +3,8 @@
 header('Content-type: application/json');
 
 $mysql_host = 'localhost';
-$mysql_user = 'adtcom_user';
-$mysql_pass = 'a4bb475b14';
+$mysql_user = 'null';
+$mysql_pass = 'null';
 
 $mysql_database = 'alexdixontriggcom_traindensity';
 
