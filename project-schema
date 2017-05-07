@@ -8,6 +8,9 @@
 |-- /scripts/
 |   `- traindensity_pageload.js
 |
+|-- /styles/
+|   `- traindensity.css
+|
 |-- traindensity.html
 |-- handlebars-v4.0.5.js
  `- jquery-1.12.2.min.js
