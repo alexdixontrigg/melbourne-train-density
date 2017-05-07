@@ -1,0 +1,102 @@
+<html>
+
+<head>
+	<title>Train Density</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="handlebars-v4.0.5.js"></script>
+	<script src="jquery-ui.min.js"></script>
+	<!-- <script src="/socket.io/socket.io.js"></script> -->
+	<script src="../scripts/traindensity_pageload.js"></script>
+	<link type="text/css" rel="stylesheet" href="../styles/traindensity.css"/>
+</head>
+
+<body>
+
+<header>
+	<!-- <img src="../media/train_icon.png" id='header-icon'> -->
+	<p>Train Comfort Prognosticator</p>
+	<!-- <div class='header-right-spacer'></div> -->
+</header>
+
+<div id='main-wrapper'>
+
+	<div class='train-carriage'></div>
+	
+	<div id='line-select-wrapper'>
+		
+		<div id='filter-bar'></div>
+		
+	</div>
+
+
+</div>
+
+
+<footer>
+</footer>
+
+</body>
+
+<script>
+
+// callback is handlebars template function
+
+
+function generateCarriageView()
+{
+	$seatLayout = [
+		[1,0,1,1,0,1,0,0,0,0,1,1,0,1,1,0,1,1,0,1,0,0,0,0,1,0,1,1,0,1,1,0,1,1,0,0,0,0,1,0,1,1,0,1],
+		[1,0,1,1,0,0,0,0,0,0,1,1,0,1,1,0,1,1,0,1,0,0,0,0,0,0,1,1,0,1,1,0,1,1,0,0,0,0,0,0,1,1,0,1],
+		[0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0],
+		[0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0],
+		[1,0,1,1,0,1,0,0,0,0,1,1,0,1,1,0,1,1,0,0,0,0,0,0,1,0,1,1,0,1,1,0,1,1,0,0,0,0,1,0,1,1,0,1],
+		[1,0,1,1,0,1,0,0,0,0,1,1,0,1,1,0,1,1,0,1,0,0,0,0,1,0,1,1,0,1,1,0,1,1,0,0,0,0,1,0,1,1,0,1]
+	];
+
+    console.log( "ready!" );
+	
+	for (var i = 0; i < 6; i++)
+	{
+		$('.train-carriage').append('<div class=\'row\' data-rownumber=\'' + i + '\'></div>');
+	}
+	
+	$.each($seatLayout, function(i)
+	{
+		$activeRow = $('.row[data-rownumber=\'' + i + '\']');
+		console.log($activeRow);
+		console.log(i);
+	
+		$.each(this, function()
+		{
+			if (this == 1)
+				$activeRow.append('<div class=\'diode-dim\'></div>');
+			else
+				$activeRow.append('<div class=\'diode-spacer\'></div>');
+		});
+	});
+	
+	/* 
+	Comeng model carriage: 44 x 6 
+
+	r lr l dd lr lr lr l dd r lr lr lr dd r lr l
+	r lr      lr lr lr l      lr lr lr      lr l
+	d         lr lr lr                      lr d
+	d lr                      lr lr lr         d
+	r lr l    lr lr lr      r lr lr lr    r lr l
+	r lr l dd lr lr lr l dd r lr lr lr dd r lr l
+	*/
+}
+
+</script>
+
+<script type="text/x-handlebars-template" id="line-entity-wrapper-template">
+	<div class='line-entity' data-id='{{id}}'>{{name}}</div>
+</script>
+
+<script type="text/x-handlebars-template" id="alpha-sub-wrapper-template">
+	<div class='alpha-sub-wrapper' data-char='{{alphaCode}}'><p>{{alphaCode}}</p>
+		<div class='line-entity-wrapper'></div>
+	</div>
+</script>
+
+</html>
