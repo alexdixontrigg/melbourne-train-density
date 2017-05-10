@@ -1,0 +1,53 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Train Density</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="handlebars-v4.0.5.js"></script>
+	<script src="traindensity_pageload.js"></script>
+	<link type="text/css" rel="stylesheet" href="traindensity.css"/>
+</head>
+
+	<script src="/socket.io/socket.io.js"></script>
+
+<body>
+
+<header>
+	<!-- <img src="../media/train_icon.png" id='header-icon'> -->
+	<p>Train Comfort Prognosticator</p>
+	<!-- <div class='header-right-spacer'></div> -->
+</header>
+
+<div id='main-wrapper'>
+
+	<div class='train-carriage'></div>
+	
+	<div id='line-select-wrapper'>
+		
+		<div id='filter-bar'>
+			<input type='text' id='search-filter' placeholder='Search...'></input>
+		</div>
+				
+	</div>
+
+
+</div>
+
+
+<footer>
+</footer>
+
+</body>
+
+<script type="text/x-handlebars-template" id="line-entity-wrapper-template">
+	<div class='line-entity' data-id='{{id}}'>{{name}}</div>
+</script>
+
+<script type="text/x-handlebars-template" id="alpha-sub-wrapper-template">
+	<div class='alpha-sub-wrapper' data-char='{{alphaCode}}'><p>{{alphaCode}}</p>
+		<div class='line-entity-wrapper'></div>
+	</div>
+</script>
+
+</html>

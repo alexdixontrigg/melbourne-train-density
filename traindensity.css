@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html, body
+{
+	background-color: rgb(242,242,239);	
+	min-height: 100%;
+	margin: 0;
+	
+	font-family: 'Roboto', sans-serif;
+}
+
+p
+{
+	margin: 0;
+}
+
+header
+{
+	width: 100%;
+	
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+header p
+{	
+	font: 2.2em/90px 'Roboto', sans-serif;
+	letter-spacing: 2px;
+}
+
+.header-right-spacer
+{
+	width: 174px;	/* width of icon */
+}
+
+#main-wrapper
+{
+	width: 800px;
+	height: -moz-calc(100% - 128px); /* Firefox */
+	height: -webkit-calc(100% - 128px); /* Chrome, Safari */
+	height: calc(100% - 128px); /* IE9+ and future browsers */
+	
+	margin: 0 auto;
+}
+
+.train-carriage
+{
+	/* display: flex; */
+	display: none;
+	flex-flow: row wrap;
+	
+	width: 704px;	/* 16 x 44 */
+	height: 96px;	/* 16 x 6  */
+	
+	margin: 0 auto;
+	
+	padding: 10px;
+	
+	border-radius: 16px;
+	
+	background-color: black;
+}
+
+.row
+{
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.diode-lit, .diode-dim, .diode-spacer
+{
+	width: 14px;
+	height: 14px;
+	border-radius: 8px;	
+	margin: 1px;
+}
+
+.diode-lit
+{
+	background-color: red;
+}
+
+.diode-dim
+{
+	background-color: gray;
+}
+
+#line-select-wrapper,
+#filter-bar,
+.alpha-sub-wrapper
+{
+	width: 400px;
+}
+
+#line-select-wrapper
+{
+	display: flex;
+	flex-flow: column nowrap;
+	margin: 0 auto;
+	
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+#line-select-wrapper #filter-bar
+{
+	height: 70px;
+	
+	margin: 0;
+	padding: 0;
+	
+	border-radius: 4px 4px 0 0;		/* top left, top right */
+	
+	background-color: #0D47A1;
+}
+
+#line-select-wrapper .alpha-sub-wrapper
+{	
+	display: flex;
+	justify-content: flex-end;
+}
+
+.alpha-sub-wrapper.light {background-color: rgb(100,100,97);}
+.alpha-sub-wrapper.dark {background-color: rgb(80,80,77);}
+
+.alpha-sub-wrapper p
+{
+	width: 60px;
+	height: 60px;
+	
+	font-size: 1.8em;
+	color: white;
+	line-height: 60px;
+	text-align: center;
+}
+
+.line-entity-wrapper
+{
+	display: flex;
+	flex-flow: column nowrap;
+	width: 340px;
+}
+
+.line-entity
+{
+	height: 60px;
+	padding-left: 20px;
+	
+	font-size: 1.4em;
+	letter-spacing: 1px;
+	line-height: 60px;
+	
+	border-left: 1px solid rgb(190,190,190);
+}
+
+.line-entity.light {background-color: #ecf3f8;}
+.line-entity.dark {background-color: #d9e8f2;}
+
+.line-entity:hover
+{
+	background-color: #64B5F6;
+	border-left: 1px solid #64B5F6;
+}

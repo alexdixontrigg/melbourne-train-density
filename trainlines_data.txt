@@ -1,0 +1,32 @@
+1	Alamein	0\n
+2	Alamein	1\n
+3	Belgrave	0\n
+4	Belgrave	1\n
+5	Craigieburn	0\n
+6	Craigieburn	1\n
+7	Cranburn	0\n
+8	Cranburn	1\n
+9	Frankston	0\n
+10	Frankston	1\n
+11	Glen Waverly	0\n
+12	Glen Waverly	1\n
+13	Hurstbridge	0\n
+14	Hurstbridge	1\n
+15	Lilydale	0\n
+16	Lilydale	1\n
+17	Pakenham	0\n
+18	Pakenham	1\n
+19	Sandringham	0\n
+20	Sandringham	1\n
+21	South Morang	0\n
+22	South Morang	1\n
+23	Stony Point	0\n
+24	Stony Point	1\n
+25	Sunbury	0\n
+26	Sunbury	1\n
+27	Upfield	0\n
+28	Upfield	1\n
+29	Werribee	0\n
+30	Werribee	1\n
+31	Williamstown	0\n
+32	Williamstown	1\n
