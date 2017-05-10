@@ -6,10 +6,7 @@ var path	= require('path');
 var mysql 	= require('mysql');
 
 var connection = mysql.createConnection({
-	host	: 'alexdixontrigg.com',
-	user	: 'adtcom_user',
-	password: 'a4bb475b14',
-	database: 'alexdixontriggcom_traindensity'
+	// no
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
